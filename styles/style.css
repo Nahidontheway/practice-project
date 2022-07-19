@@ -19,13 +19,16 @@ popular-collection section
     line-height: 70px;
 }
 .products{
+    width: 100%;
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(3,1fr);
 }
 .product{
     width: 329px;
     height: 430px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 30px;
 }
 .product .thumbnail{
     width: 301px;
@@ -59,4 +62,14 @@ popular-collection section
     width: 301px;
     height: 256px;
     object-fit: cover;
+}
+@media screen and (max-width:576px) {
+    .products{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media screen and (min-width:577px) and (max-width:776px){
+    .products{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
